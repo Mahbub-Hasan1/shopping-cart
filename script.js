@@ -13,6 +13,7 @@ iPhone11BlackPlusBtn.addEventListener("click", function(){
     document.getElementById("iPhone11Price").innerText = iPhonePriceTotalNumber;
 
     subTotal()
+    Total()
 
 });
  // iPhone mines-
@@ -30,6 +31,7 @@ iPhone11BlackMinusBtn.addEventListener("click", function(){
     document.getElementById("iPhone11Price").innerText = iPhonePriceTotalNumber;
 
     subTotal()
+    Total()
 })
 // iPhone 11 128GB Black end
 // =================
@@ -39,9 +41,9 @@ const iPhon11CaseBlackBtn = document.getElementById("iPhon11CaseBlackPlusBtn");
 iPhon11CaseBlackBtn.addEventListener("click", function(){
     const iPhon11CaseBlackValue = document.getElementById("iPhon11CaseBlackValue").value;
     const iPhon11CaseBlackValueNumber = parseFloat(iPhon11CaseBlackValue);
-    const iPhon11CaseBlackValueNumberTotl = iPhon11CaseBlackValueNumber + 1;
+    const iPhon11CaseBlackValueNumberTotal = iPhon11CaseBlackValueNumber + 1;
 
-    document.getElementById("iPhon11CaseBlackValue").value = iPhon11CaseBlackValueNumberTotl;
+    document.getElementById("iPhon11CaseBlackValue").value = iPhon11CaseBlackValueNumberTotal;
 
     const iPhone11CasePrice = document.getElementById("iPhone11CasePrice").innerText;
     const iPhone11CasePriceNumber = parseFloat(iPhone11CasePrice);
@@ -49,6 +51,7 @@ iPhon11CaseBlackBtn.addEventListener("click", function(){
     document.getElementById("iPhone11CasePrice").innerText = iPhonePriceTotalNumber;
 
     subTotal()
+    Total()
 })
 // iPhone Case mines-
 const iPhon11CaseBlackMinusBtn = document.getElementById("iPhon11CaseBlackMinusBtn");
@@ -66,6 +69,7 @@ iPhon11CaseBlackMinusBtn.addEventListener("click", function(){
     document.getElementById("iPhone11CasePrice").innerText = iPhonePriceTotalNumber;
 
     subTotal()
+    Total()
     
 })
 function subTotal() {
@@ -73,4 +77,10 @@ function subTotal() {
     const priceOfItem2 = document.getElementById('iPhone11CasePrice').innerText;
     const subTotal = parseInt(priceOfItem1) + parseInt(priceOfItem2);
     document.getElementById('Subtotal').innerText = subTotal;
+}
+function Total() {
+    const priceOfItem1 = document.getElementById('iPhone11Price').innerText;
+    const priceOfItem2 = document.getElementById('iPhone11CasePrice').innerText;
+    const Total = parseInt(priceOfItem1) + parseInt(priceOfItem2);
+    document.getElementById("Total").innerText = Total;
 }
