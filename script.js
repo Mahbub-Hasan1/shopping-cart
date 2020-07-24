@@ -12,6 +12,8 @@ iPhone11BlackPlusBtn.addEventListener("click", function(){
     const iPhonePriceTotalNumber = iPhonePriceNumber + 1219;
     document.getElementById("iPhone11Price").innerText = iPhonePriceTotalNumber;
 
+    subTotal()
+
 });
  // iPhone mines-
 const iPhone11BlackMinusBtn = document.getElementById("iPhone11BlackMinusBtn");
@@ -26,6 +28,8 @@ iPhone11BlackMinusBtn.addEventListener("click", function(){
     const iPhonePriceNumber = parseFloat(iPhonePrice);
     const iPhonePriceTotalNumber = iPhonePriceNumber - 1219;
     document.getElementById("iPhone11Price").innerText = iPhonePriceTotalNumber;
+
+    subTotal()
 })
 // iPhone 11 128GB Black end
 // =================
@@ -44,7 +48,7 @@ iPhon11CaseBlackBtn.addEventListener("click", function(){
     const iPhonePriceTotalNumber = iPhone11CasePriceNumber + 59;
     document.getElementById("iPhone11CasePrice").innerText = iPhonePriceTotalNumber;
 
-    
+    subTotal()
 })
 // iPhone Case mines-
 const iPhon11CaseBlackMinusBtn = document.getElementById("iPhon11CaseBlackMinusBtn");
@@ -61,7 +65,12 @@ iPhon11CaseBlackMinusBtn.addEventListener("click", function(){
     const iPhonePriceTotalNumber = iPhone11CasePriceNumber - 59;
     document.getElementById("iPhone11CasePrice").innerText = iPhonePriceTotalNumber;
 
-
+    subTotal()
     
 })
-
+function subTotal() {
+    const priceOfItem1 = document.getElementById('iPhone11Price').innerText;
+    const priceOfItem2 = document.getElementById('iPhone11CasePrice').innerText;
+    const subTotal = parseInt(priceOfItem1) + parseInt(priceOfItem2);
+    document.getElementById('Subtotal').innerText = subTotal;
+}
